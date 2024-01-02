@@ -9,7 +9,7 @@ from core.camera import BaseRosCamera
 
 if __name__ == '__main__':
     rospy.init_node("test")
-    cam = BaseRosCamera("/camera/depth/image_raw", "passthrough")
+    cam = BaseRosCamera("Depth1", "/camera/depth/image_raw", "passthrough")
     final = np.zeros_like(cam.read()).astype(int)
 
     for i in range(4):

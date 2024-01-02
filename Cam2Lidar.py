@@ -1,6 +1,4 @@
 import rospy
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
 import cv2
 import numpy as np
 import math
@@ -14,7 +12,7 @@ NODE_NAME = "camera_node"
 
 
 @nb.njit
-def ray_casting(image, point, angle_range=(-180, 180), num_rays=360):
+def rayCasting(image, point, angle_range=(-180, 180), num_rays=360):
     height, width = image.shape[:2]
     rays = np.linspace(angle_range[0], angle_range[1], num_rays)
 
@@ -46,10 +44,8 @@ def ray_casting(image, point, angle_range=(-180, 180), num_rays=360):
     return result, distance
 
 
-def convert_lidar_to_laserscan(lidar_data, intersity):
+def convertLidarToLaserScan(lidar_data):
     scan_msg = LaserScan()
-    for i in range(len(lidar_data)):
-        lidar_data[i] *= intersity
     # Set the necessary parameters
     scan_msg.header.stamp = rospy.Time.now()
     scan_msg.header.frame_id = 'camera_depth_frame'
@@ -67,22 +63,6 @@ def convert_lidar_to_laserscan(lidar_data, intersity):
     return scan_msg
 
 
-'''
-def get_bg_noise(fovh, img, theta, height):
-    near = img.shape[0]/(2*np.tan(fovh/2))
-    th = np.arange(img.shape[0]/2, -img.shape[0]/2, -1) / near
-    th = np.tan(np.arctan(th)+theta/2)
-    bg_noise = np.zeros_like(img)
-    bg_noise_col = height * (np.cos(theta/2) + np.sin(theta/2) * th)
-    bg_noise[:, :] = bg_noise_col[:, np.newaxis]
-    return bg_noise
-'''
-
-
-def get_bg_noise(fovh, img, theta, height):
-    return np.loadtxt("depth.txt")
-
-
 def main():
     rospy.init_node(NODE_NAME)
     rospy.loginfo(f"{NODE_NAME} started!")
@@ -95,15 +75,11 @@ def main():
     frame_cnt = 0
     t = time.time()
     print(np.max(cam.read()))
-    bg_noise = np.zeros_like(cam.read())
-    bg_noise = get_bg_noise(np.deg2rad(cam.fov[1]), bg_noise, np.deg2rad(25), 900)
+    bg_noise = np.loadtxt("depth.txt")
     print(bg_noise)
     print(cam.read())
 
     max_diff = 25
-    diff = None
-
-    intersity = 105 / 480 / 100
     while not rospy.is_shutdown():
         frame_cnt += 1
         rospy.Rate(10).sleep()
@@ -118,7 +94,7 @@ def main():
         rgb = cv2.cvtColor(diff, cv2.COLOR_GRAY2RGB)
         x, y = 320, 479
 
-        result, distance = ray_casting(diff, (x, y))
+        result, distance = rayCasting(diff, (x, y))
         for i in range(len(result) - 1):
             x2, y2 = result[i]
             if distance[i] < 900:
@@ -126,7 +102,7 @@ def main():
             else:
                 cv2.line(rgb, (x, y), (x2, y2), (255, 0, 0), 1)
 
-        scan_msg = convert_lidar_to_laserscan(distance, intersity)
+        scan_msg = convertLidarToLaserScan(distance)
         pub.publish(scan_msg)
 
         cv2.imshow("image", rgb)
@@ -134,7 +110,6 @@ def main():
         kc = cv2.waitKey(1)
 
         if kc == 27:
-            # np.savetxt("diff.txt", diff.astype(int), fmt="%d")
             break
 
         if frame_cnt == 50:
