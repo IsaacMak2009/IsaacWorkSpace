@@ -6,7 +6,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 class BaseRosCamera:
-    def __init__(self, name: str, topic_name: str="/camera/rgb/image_raw", encoding: str="bgr8"):
+    def __init__(self, name: str, topic_name: str="/camera/color/image_raw", encoding: str="bgr8"):
         '''
         :param name: string, name of camera
         :param topic_name: string, image topic such as /camera/rgb/image_raw

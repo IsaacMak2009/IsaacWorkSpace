@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9bd980c-3676-4104-b509-c28559c096da" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/core/chassis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/respeaker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RosCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RosCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cam2Lidar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cam2Lidar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getGroundData.py" beforeDir="false" afterPath="$PROJECT_DIR$/getGroundData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/chassis.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/chassis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.respeaker.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/root/catkin_ws/devel/lib/python2.7/dist-packages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.respeaker.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/root/catkin_ws/devel/lib/python2.7/dist-packages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" show_stripe_button="false" />
@@ -62,8 +58,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33011132" />
-      <window_info active="true" id="Commit" order="1" visible="true" weight="0.33011132" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33088666" />
+      <window_info id="Commit" order="1" weight="0.33011132" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
@@ -71,10 +67,10 @@
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" weight="0.5255152" />
+      <window_info anchor="bottom" id="Run" weight="0.60107946" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3302257" />
       <window_info anchor="bottom" id="Problems View" order="1" weight="0.3302257" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3302257" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.59931505" />
       <window_info anchor="bottom" id="Services" order="3" weight="0.3302257" />
       <window_info anchor="right" id="Plots" show_stripe_button="false" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
@@ -135,6 +131,10 @@
       <workItem from="1704088967985" duration="1185000" />
       <workItem from="1704164070267" duration="590000" />
       <workItem from="1704166804554" duration="594000" />
+      <workItem from="1704195040611" duration="588000" />
+      <workItem from="1704247356310" duration="598000" />
+      <workItem from="1704503474787" duration="1640000" />
+      <workItem from="1704794490332" duration="325000" />
     </task>
     <servers />
   </component>
@@ -154,5 +154,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RosCode$respeaker.coverage" NAME="respeaker 覆盖结果" MODIFIED="1704087932106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/RosCode$main.coverage" NAME="main 覆盖结果" MODIFIED="1704794694423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

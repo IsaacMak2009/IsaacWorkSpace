@@ -4,7 +4,7 @@ from core.camera import BaseRosCamera
 
 def main():
     rospy.init_node("RosCode", anonymous=True)
-    camera = BaseRosCamera()
+    camera = BaseRosCamera("MyCam")
 
     while not rospy.is_shutdown():
         frame = camera.read()
